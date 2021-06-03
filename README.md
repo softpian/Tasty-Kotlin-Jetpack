@@ -35,7 +35,7 @@ yelpApiKey="abcd788a5fnd5r134id6a792ff39pp68dcs3"
 
 Screenshots
 -----------
-<p><img src=https://softpian.github.io/images/tasty_main.jpg width="200"/><img src=https://softpian.github.io/images/tasty_details.jpg width="200"/></p>
+<p><img src=https://softpian.github.io/images/tasty_main.jpg width="200"/>&nbsp;&nbsp;<img src=https://softpian.github.io/images/tasty_details.jpg width="200"/></p>
 
 
 
