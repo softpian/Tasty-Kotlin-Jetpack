@@ -1,5 +1,5 @@
 # Tasty-Kotlin-Jetpack
-Tasty Android application using several skills such as Kotlin, Coroutines, Jetpack, MVVM architecture, Hilt, Retrofit, Kotlin Flow, etc.
+Tasty Android application written by Kotlin language with several skills such as Kotlin Coroutines, Jetpack, MVVM architecture, Hilt, Retrofit, Kotlin Flow, etc.
 
 Introduction
 ------------
