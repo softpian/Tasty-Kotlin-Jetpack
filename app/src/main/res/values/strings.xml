@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Tasty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_restaurant_to_favorites">Save restaurant to favorites</string>
+    <string name="opening_hours">Opening Hours</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="auckland">Auckland</string>
+    <string name="wellington">Wellington</string>
+    <string name="queenstown">Queenstown</string>
+    <string name="christchurch">Christchurch</string>
+    <string name="hamilton">Hamilton</string>
+    <string name="tauranga">Tauranga</string>
+    <string name="dunedin">Dunedin</string>
+    <string name="rotorua">Rotorua</string>
+    <string name="palmerston_north">Palmerston North</string>
+    <string name="italian">Italian</string>
+    <string name="indian">Indian</string>
+    <string name="asian">Asian</string>
+    <string name="burgers">Burgers</string>
+    <string name="chinese">Chinese</string>
+    <string name="japanese">Japanese</string>
+    <string name="korean">Korean</string>
+    <string name="mexican">Mexican</string>
+    <string name="thai">Thai</string>
+    <string name="location">Location</string>
+    <string name="food_type">Food Type</string>
+    <string name="search">Search</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="enjoy_chat">Enjoy chat!</string>
+</resources>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="details"
+            type="com.softpian.tasty.models.yelp.Details" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/fragment_details_xml_constraintlayout_scene"
+        tools:context=".ui.details.DetailsFragment">
+
+        <ImageView
+            android:id="@+id/restaurant_imageView"
+            loadDetailsImageFromUrl="@{details.imageUrl}"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <View
+            android:id="@+id/gradient_view"
+            android:layout_width="0dp"
+            android:layout_height="190dp"
+            android:background="@drawable/gradient_overlay"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurant_imageView"
+            app:layout_constraintEnd_toEndOf="@+id/restaurant_imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/restaurant_imageView" />
+
+        <TextView
+            android:id="@+id/price_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@{details.price}"
+            android:textColor="@color/darker"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restaurant_imageView"
+            tools:text="$$$" />
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="24dp"
+            android:text="@{details.categories[0].title}"
+            android:textColor="@color/darker"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/price_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/price_textView"
+            app:layout_constraintTop_toTopOf="@+id/price_textView"
+            tools:text="Coffee and Bear" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+            android:max="5"
+            android:numStars="5"
+            android:progressTint="@color/red"
+            android:rating="@{(float)details.rating}"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            android:stepSize="0.5"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurant_imageView"
+            app:layout_constraintStart_toEndOf="@+id/is_open_textView" />
+
+        <TextView
+            android:id="@+id/name_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/bowlby_one"
+            android:text="@{details.name}"
+            android:textColor="@color/colorOnSecondary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+            app:layout_constraintEnd_toEndOf="@+id/restaurant_imageView"
+            app:layout_constraintStart_toStartOf="@+id/restaurant_imageView"
+            tools:text="Cafe and Bar" />
+
+
+        <TextView
+            android:id="@+id/review_count_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="@{String.valueOf(details.reviewCount)}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorOnSecondary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+            app:layout_constraintStart_toEndOf="@+id/ratingBar"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar"
+            tools:text="15" />
+
+        <TextView
+            android:id="@+id/is_open_textView"
+            isOpenNow="@{details.hours[0].isOpenNow}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/lightGreen"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurant_imageView"
+            app:layout_constraintStart_toStartOf="@+id/name_textView"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar"
+            tools:text="Open" />
+
+        <TextView
+            android:id="@+id/phone_number_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="24dp"
+            android:text="@{details.displayPhone}"
+            android:textColor="@color/darker"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/call_imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/call_imageView"
+            app:layout_constraintTop_toTopOf="@+id/call_imageView"
+            tools:text="+64 9-363 7048" />
+
+        <ImageView
+            android:id="@+id/call_imageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_call"
+            app:layout_constraintStart_toStartOf="@+id/price_textView"
+            app:layout_constraintTop_toBottomOf="@+id/title_textView"
+            app:tint="@color/orange" />
+
+        <TextView
+            android:id="@+id/address_textView"
+            putWholeAddress="@{details.location.displayAddress}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/darker"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/call_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/call_imageView"
+            tools:text="86 Federal St" />
+
+        <TextView
+            android:id="@+id/hours_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/opening_hours"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address_textView" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hours_textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mon"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/mon_opening_hours_textView"
+                        setEndOfOpeningHour="@{details.hours[0].open[0].end}"
+                        setStartOfOpeningHour="@{details.hours[0].open[0].start}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        tools:text="7:00 AM - 12:00 AM" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tue"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/tue_opening_hours_textView"
+                        setEndOfOpeningHour="@{details.hours[0].open[1].end}"
+                        setStartOfOpeningHour="@{details.hours[0].open[1].start}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        tools:text="7:00 AM - 12:00 AM" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wed"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/wed_opening_hours_textView"
+                        setEndOfOpeningHour="@{details.hours[0].open[2].end}"
+                        setStartOfOpeningHour="@{details.hours[0].open[2].start}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        tools:text="7:00 AM - 12:00 AM" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thu"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/thu_opening_hours_textView"
+                        setEndOfOpeningHour="@{details.hours[0].open[3].end}"
+                        setStartOfOpeningHour="@{details.hours[0].open[3].start}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        tools:text="7:00 AM - 12:00 AM" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fri"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/fri_opening_hours_textView"
+                        setEndOfOpeningHour="@{details.hours[0].open[4].end}"
+                        setStartOfOpeningHour="@{details.hours[0].open[4].start}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        tools:text="7:00 AM - 12:00 AM" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sat"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/sat_opening_hours_textView"
+                        setEndOfOpeningHour="@{details.hours[0].open[5].end}"
+                        setStartOfOpeningHour="@{details.hours[0].open[5].start}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        tools:text="7:00 AM - 12:00 AM" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sun"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/sun_opening_hours_textView"
+                        setEndOfOpeningHour="@{details.hours[0].open[6].end}"
+                        setStartOfOpeningHour="@{details.hours[0].open[6].start}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/darker"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        tools:text="7:00 AM - 12:00 AM" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

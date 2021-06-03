@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tasty_nav"
+    app:startDestination="@id/restaurantFragment">
+
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="com.softpian.tasty.ui.restaurant.RestaurantFragment"
+        android:label="Restaurant"
+        tools:layout="@layout/fragment_restaurant" >
+        <action
+            android:id="@+id/action_restaurantFragment_to_businessDetailsActivity"
+            app:destination="@id/businessDetailsActivity" />
+        <action
+            android:id="@+id/action_restaurantFragment_to_restaurantBottomSheet"
+            app:destination="@id/restaurantBottomSheet" />
+        <argument
+            android:name="isFromBottomSheet"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.softpian.tasty.ui.favorite.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_businessDetailsActivity"
+            app:destination="@id/businessDetailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.softpian.tasty.ui.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" />
+    <activity
+        android:id="@+id/businessDetailsActivity"
+        android:name="com.softpian.tasty.BusinessDetailsActivity"
+        android:label="activity_business_details"
+        tools:layout="@layout/activity_business_details" >
+        <argument
+            android:name="business"
+            app:argType="com.softpian.tasty.models.yelp.Business" />
+    </activity>
+    <dialog
+        android:id="@+id/restaurantBottomSheet"
+        android:name="com.softpian.tasty.ui.restaurant.bottomsheet.RestaurantBottomSheet"
+        android:label="RestaurantBottomSheet" >
+        <action
+            android:id="@+id/action_restaurantBottomSheet_to_restaurantFragment"
+            app:destination="@id/restaurantFragment"
+            app:popUpTo="@id/restaurantFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+</navigation>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">@color/purple_500</color>-->
+<!--    <color name="colorPrimaryVariant">@color/purple_700</color>-->
+<!--    <color name="colorOnPrimary">@color/white</color>-->
+    <color name="colorPrimary">@color/lightRed</color>
+    <color name="colorPrimaryVariant">@color/mediumRed</color>
+    <color name="colorOnPrimary">@color/white</color>
+
+<!--    <color name="colorSecondary">@color/teal_200</color>-->
+<!--    <color name="colorSecondaryVariant">@color/teal_700</color>-->
+<!--    <color name="colorOnSecondary">@color/white</color>-->
+    <color name="colorSecondary">@color/orange</color>
+    <color name="colorSecondaryVariant">@color/darkOrange</color>
+    <color name="colorOnSecondary">@color/white</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="red">#FFFF0000</color>
+    <color name="lightRed">#FFAA0000</color>
+    <color name="mediumRed">#FF770000</color>
+    <color name="lightMediumRed">#FF550000</color>
+    <color name="darkRed">#FF440000</color>
+    <color name="darkerRed">#FF330000</color>
+
+    <color name="green">#00FF00</color>
+    <color name="lightGreen">#00AA00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="lightYellow">#CCCC00</color>
+    <color name="mediumYellow">#FFC700</color>
+    <color name="orange">#FF9800</color>
+    <color name="darkOrange">#FF5500</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightGray">#F7F7F7</color>
+    <color name="mediumGray">#B7B7B7</color>
+    <color name="lightMediumGray">#70B7B7B7</color>
+    <color name="darkGray">#5C5C5C</color>
+    <color name="dark">#3F3F3F</color>
+    <color name="darker">#191919</color>
+
+    <color name="backgroundColor">@color/lightGray</color>
+    <color name="placeholderColor">@color/mediumGray</color>
+    <color name="itemColor">@color/darker</color>
+
+    // Custom CardView Style
+    <color name="strokeColor">@color/lightMediumGray</color>
+    <color name="cardViewBackgroundColor">@color/white</color>
+    <color name="cardViewBackgroundLightColor"></color>
+    <color name="titleColor">@color/darker</color>
+
+    // Status Bar
+    <color name="statusBarColor">@color/colorPrimaryVariant</color>
+    <color name="contextualStatusBarColor">@color/darker</color>
+    <color name="contextualActionBarColor">@color/dark</color>
+    <color name="actionBarBackgroundColor">@color/colorPrimary</color>
+
+    // Chip Style
+    <color name="checkedChipBackgroundColor">@color/orange</color>
+    <color name="chipBackgroundColor">@color/lightGray</color>
+    <color name="checkedChipTextColor">@color/colorPrimary</color>
+    <color name="chipTextColor">@color/darkGray</color>
+
+
+</resources>
