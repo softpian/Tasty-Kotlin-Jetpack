@@ -11,12 +11,13 @@ Android development skills / Libraries(Jetpack) Used
 * Kotlin language
 * MVVM Architecture
 * ROOM Database
-* Hilt
+* Hilt (Dependency Injection)
 * Kotlin Coroutines
 * Kotlin Flow
 * Navigation Component
 * Data Binding
-* Retrofit
+* Retrofit/OkHttp
+* Etc.(DiffUtil..)
 
 
 Getting Started
