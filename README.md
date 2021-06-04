@@ -3,7 +3,7 @@ Tasty Android application written by Kotlin language with several skills such as
 
 Introduction
 ------------
-This application lets you know how to implement Android app which help search for restaurants with trendy Android developement skills by using Yelp Fusion API.
+This application lets you know how to implement Android app which help search for restaurants with trendy Android developement skills by using [Yelp Fusion API][100].
 
 
 Android development skills / Libraries(Jetpack) Used
