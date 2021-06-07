@@ -17,6 +17,7 @@ Android development skills / Libraries(Jetpack) Used
 * Navigation Component
 * Data Binding
 * Retrofit/OkHttp
+* MotionLayout
 * Etc.(DiffUtil..)
 
 
@@ -40,8 +41,8 @@ Screenshots
 
 Screen recording
 ----------------
-![tasty](https://softpian.github.io/gifs/tasty_reduced.gif)
-<p><img src="https://softpian.github.io/gifs/tasty_reduced.gif" width="200"/></p>
+<p><img src="https://softpian.github.io/gifs/tasty_reduced.gif" width="250"/></p>
+
 
 
 
