@@ -37,7 +37,11 @@ yelpApiKey="abcd788a5fnd5r134id6a792ff39pp68dcs3"
 Screenshots
 -----------
 <p><img src=https://softpian.github.io/images/tasty_main.jpg width="200"/>&nbsp;&nbsp;<img src=https://softpian.github.io/images/tasty_details.jpg width="200"/></p>
-![Tasty screenshot](https://softpian.github.io/gifs/tasty_reduced.gif)
+
+Screen recording
+----------------
+![tasty](https://softpian.github.io/gifs/tasty_reduced.gif)
+<p><img src="https://softpian.github.io/gifs/tasty_reduced.gif" width="200"/></p>
 
 
 
