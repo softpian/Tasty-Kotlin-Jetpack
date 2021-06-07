@@ -8,17 +8,17 @@ This simple project lets you know how to implement Android app which help search
 
 Android development skills / Libraries(Jetpack) Used
 ----------------------------------------------------
-* Kotlin language
-* MVVM Architecture
-* ROOM Database
-* Hilt (Dependency Injection)
-* Kotlin Coroutines
-* Kotlin Flow
-* Navigation Component
-* Data Binding
-* Retrofit/OkHttp
-* MotionLayout
-* Etc.(DiffUtil..)
+* **Kotlin language**
+* **MVVM Architecture**
+* **ROOM Database**
+* **Hilt (Dependency Injection)**
+* **Kotlin Coroutines**
+* **Kotlin Flow**
+* **Navigation Component**
+* **Data Binding**
+* **Retrofit/OkHttp**
+* **MotionLayout**
+* **Etc.(DiffUtil..)**
 
 
 Getting Started
